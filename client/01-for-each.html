@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        const toDoList = [
+            {toDo: "Compras de la semana", status: false},
+            {toDo: "Leer libro", status: true},
+            {toDo: "Escuchar capítulo del podcast", status: true},
+            {toDo: "Ver pelicula", status: false},
+        ];
+        const app = document.getElementById("app"); 
+          toDoList.forEach(toDoList => {
+            app.innerHTML += `<li>${toDoList.toDo} - <input type="checkbox" ${toDoList.status ? 'checked' : ''}</li>`
+        })
+    </script>
+</body>
+</html>
